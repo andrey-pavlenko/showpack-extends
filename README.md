@@ -83,40 +83,6 @@ module.exports = {
 };
 ```
 
-## snowpack@2.17.1
-
-```sh
-$ npm run build
-```
-
-```c
-.
-├── _dist_
-│   ├── Cmp1.sass
-│   ├── Cmp1.svelte // Cmp1.js is missing
-│   ├── Cmp1.svelte.proxy.js
-│   └── index.js
-├── favicon.ico
-├── index.html
-├── __snowpack__
-│   └── env.js
-└── styles.css
-// web_modules are missing
-
-```
-
-- Cmp1.svelte.proxy.js
-
-```js
-export default '/_dist_/Cmp1.svelte';
-```
-
-- Cmp1.svelte
-
-```svelte
-<div>Cmp1</div>
-```
-
 ## snowpack@2.17.0
 
 ```sh
@@ -152,3 +118,39 @@ element,
 ...
 
 ```
+
+## snowpack@2.17.1
+
+```sh
+$ npm run build
+```
+
+```c
+.
+├── _dist_
+│   ├── Cmp1.sass
+│   ├── Cmp1.svelte // Cmp1.js is missing
+│   ├── Cmp1.svelte.proxy.js
+│   └── index.js
+├── favicon.ico
+├── index.html
+├── __snowpack__
+│   └── env.js
+└── styles.css
+// web_modules are missing
+
+```
+
+- Cmp1.svelte.proxy.js
+
+```js
+export default '/_dist_/Cmp1.svelte';
+```
+
+- Cmp1.svelte
+
+```svelte
+<div>Cmp1</div>
+```
+
+### It looks like basic plugins won't launch. Only inherited plugins are executed.
