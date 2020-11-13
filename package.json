@@ -1,14 +1,13 @@
 {
   "scripts": {
     "start": "snowpack dev",
-    "build": "snowpack build",
-    "test": "web-test-runner \"src/**/*.test.js\""
+    "build": "snowpack build"
   },
   "devDependencies": {
-    "svelte": "^3.24.0",
     "@snowpack/plugin-dotenv": "^2.0.4",
     "@snowpack/plugin-svelte": "^3.3.0",
     "sass": "^1.29.0",
-    "snowpack": "^2.17.0"
+    "snowpack": "^2.17.0",
+    "svelte": "^3.24.0"
   }
 }
